@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index.html</title>
+
+    <script>
+        function main() {
+        aID=[];
+        aDESCR=[];
+        aQTDE=[];
+        aPRECO=[];
+
+          opc=-1;  
+            while(opc!=0) {
+          console.log("####### EMPRESA DE XYZ #######");
+          console.log("------------------------------");
+          console.log("1.Incluir produto");
+          console.log("2.Alterar produto");
+          console.log("3.Excluir produto");
+          console.log("4.Listar");
+          console.log("5.Salvar");
+          console.log("0.Sair");      
+          opc=prompt("Digite um valor entre 0 e 5");     
+          if((opc>=0 && opc<=5)) {
+            alert("Opção válida!");
+            if(opc==1) {
+                id=prompt("Digite o código do produto: ");
+                descr=prompt("Digite a descrição: ");
+                qtde=prompt("Digite a quantidade: ");
+                preco=prompt("Digite o preço: ");
+                aID.push(id);
+                aDESCR.push(descr);
+                aQTDE.push(qtde);
+                aPRECO.push(preco);
+            }
+            if(opc==2) {
+              id=prompt("Digite o código");
+              for(i=0;i<aID.lenght;i++) {
+                if(id==aID[i]) {
+                  descr=prompt("Digite o nova descrição:");
+                  qtde=prompt("Digite nova quantidade: ");
+                  preco=prompt("Digite novo preço: ");
+                  if(descr!="" && descr)
+
+                }
+              }
+            }
+            if(opc==4) {
+                for(i=0;i<aID.lenght;i++) {
+                  console.log("    ");
+                  console.log("    ");
+                  console.log("Listagem de produtos")
+                    console.log(aID[i]+" "+aDESCR[i]+" "+aQTDE[i]+" "+aPRECO[i]);
+                }
+            }
+
+          }
+          else{
+            alert("Selecione uma opção entre 0 e 5");
+          }
+
+
+          }
+          
+        }
+            
+    </script>
+</head>
+<body onload="main()">
+</body>
+</html>
